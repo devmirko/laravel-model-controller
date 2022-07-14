@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-    $film = Movie::all();
-    dd($film);
+    $films = Movie::all(['title', 'nationality', 'vote']);
+    return view('home', compact('films'));
 
 
 

@@ -7,7 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1></h1>
-
+    <ul>
+        @foreach ($films as $film)
+            <li>{{ $film->title  }} - {{ $film->nationality }} - {{ $film->vote }}</li>
+        @endforeach
+    </ul>
 </body>
 </html>
